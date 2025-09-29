@@ -56,6 +56,9 @@ Tambien se realizo un filtro de outliers y diferencias de dias mayores a 0 (Fech
 Al realizar este analisis en vez de un TOP 1 utilice un TOP 2.
 Durante este analisis utilice un CSV que sin filtrar las coincidencias de mas de un DNI.
 - Analisis por sintomas: [sintomas.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/sintomas.py)
-- Cantidad de internados: [internados.py]()
-- Cantidad de fallecidos: [fallecidos.py]()
+![](imagenes/sintomas_frecuentes.jpg)
+- Cantidad de internados: [internados.py](fallecidos_internados.py#L5-L7)
+- Cantidad de fallecidos: [fallecidos.py](fallecidos_internados.py#L9-L11)
+ ![](imagenes/internados_fallecidos.jpg)
+
 ## 4 - Seccion laboratorio. 
