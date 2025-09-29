@@ -28,12 +28,12 @@ operador al momento de la carga?
 
 {METODOLOGIA DE TRABAJO}
 
-#Preparacion y normalización de datos.
+## Preparacion y normalización de datos.
 Eliminar columnas vacias, normalizar index de columnas, reemplazar espacios por guiones bajos, reemplazar caracteres con tilde. Reemplazar distintas variaciaciones de "*sin dato*" como dato nulo a un solo valor "No disponible".
 Ordenar por DNI de menor a mayor.
-Codigo: normalizar_datos.py
+- Codigo: normalizar_datos.py
 
-#1 - Analisis nominal.
+## 1 - Analisis nominal.
 Eliminacion de DNI duplicados con chequeo de mas de un evento por DNI para garantizar integridad del análisis.
 Dado que el dataset contiene informacion por localidad, se realizo un mapeo a municipios para el analisis, . Se utilizo fuzzy matching para maximizar las coincidencias.
 - Codigo por evento: evento.py
@@ -44,6 +44,6 @@ Dado que el dataset contiene informacion por localidad, se realizo un mapeo a mu
 - Codigos por municipio: municipio2.py Analisis de eventos por municipio.
 - Codigos por municipio: municipio3.py Analisis de casos por municipio.
 
-#2 - Analisis clínico.
+## 2 - Analisis clínico.
 Durante este analisis se utilizo un CSV en la cual se filtraron las repeticiones de DNI con First match, first keep, chequeando que no haya otro evento en el mismo DNI, dado que esto altera las mediciones de la mediana.
 - Analisis de calculo de dias y mediana: mediana_sin_outliers.py
