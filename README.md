@@ -31,7 +31,7 @@ operador al momento de la carga?
 ## Preparacion y normalización de datos.
 Eliminar columnas vacias, normalizar index de columnas, reemplazar espacios por guiones bajos, reemplazar caracteres con tilde. Reemplazar distintas variaciaciones de "*sin dato*" como dato nulo a un solo valor "No disponible".
 Ordenar por DNI de menor a mayor.
-- Codigo: (https://github.com/MaxeeBenet/cienciadedatos/blob/main/normalizar_datos.py)
+- Codigo: [evento.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/normalizar_datos.py)
 
 ## 1 - Analisis nominal.
 Eliminacion de DNI duplicados con chequeo de mas de un evento por DNI para garantizar integridad del análisis.
