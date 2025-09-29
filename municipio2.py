@@ -53,4 +53,4 @@ detalle_eventos_final = pd.concat([detalle_eventos_top10, detalle_eventos_otros]
 print(detalle_eventos_final.head(20))
 # .to_csv creo un archivo csv para poder graficar de manera mas simple con excel.
 
-detalle_eventos_final.to_csv("detalle_eventos_final.csv", index=False, encoding="utf-8")
+#detalle_eventos_final.to_csv("detalle_eventos_final.csv", index=False, encoding="utf-8")
