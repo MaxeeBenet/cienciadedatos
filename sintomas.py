@@ -8,9 +8,7 @@ resumen = (
     df_filtrado
     .groupby(['evento','signo_/_sintoma'])
     .agg(
-        total_casos = ('signo_/_sintoma', "size"),
-        internados = ('fecha_internacion', lambda x:( x != "No disponible").sum()),
-        fallecidos = ('fallecido', lambda x: (x == "SI").sum())
+        total_casos = ('signo_/_sintoma', "size")
     )
     .reset_index()
 )
