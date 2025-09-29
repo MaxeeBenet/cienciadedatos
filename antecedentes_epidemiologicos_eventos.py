@@ -6,8 +6,8 @@ df = pd.read_csv('antecedentes_epidemiologico_eventos.csv')
 
 pivot_df = df.pivot_table(
     index='evento', 
-    columns='antecedente_epidemiológico', 
-    values='cant_casos', 
+    columns='antecedente_epidemiologico', 
+    values='cantidad_casos', 
     aggfunc='sum', 
     fill_value=0
 )

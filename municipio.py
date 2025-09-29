@@ -1,8 +1,8 @@
 import pandas as pd
 
-df_unico = pd.read_csv("df_unico_municipios.csv")
+df_unico = pd.read_csv("df_limpio_municipio_sin_repeticiones.csv")
 #filtro columna no disponible.
-df_filtrado = df_unico[df_unico["municipio"] != " NO DISPONIBLE"]
+df_filtrado = df_unico[df_unico["municipio"] != "No disponible"]
 
 #agrupar cantidad de casos por municipio.
 casos_por_municipio = df_filtrado.groupby("municipio")["evento"].count().reset_index()
@@ -23,4 +23,4 @@ conteo_rangos.columns = ["Rango", "Cantidad de municipios"]
 cantidad_municipios = df_unico["municipio"].nunique()
 
 #guardo en csv para realizar graficos.
-conteo_rangos.to_csv("conteo_rangos.csv", index=False, encoding="latin-1")
+conteo_rangos.to_csv("conteo_rangos.csv", index=False, encoding="utf-8")

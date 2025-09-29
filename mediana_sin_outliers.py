@@ -1,13 +1,18 @@
 import pandas as pd
 
-df = pd.read_csv("df_unico_municipios_normalizado.csv", encoding="latin-1")
+#utilizo csv sin repeticiones por DNI.
+df = pd.read_csv("df_limpio_municipio_sin_repeticiones.csv", encoding="utf-8")
+
 
 df["fecha_de_consulta"] = pd.to_datetime(df["fecha_de_consulta"], errors='coerce', dayfirst=True)
+
 df["fecha_de_inicio_de_sintomas"] = pd.to_datetime(df["fecha_de_inicio_de_sintomas"], errors='coerce', dayfirst=True)
 
 df["Diferencia_de_dias"] = (df["fecha_de_consulta"] - df['fecha_de_inicio_de_sintomas']).dt.days
 
+#filtro fechas con dias negativos. Fechas de consulta anteriores a la fecha de inicio de sintomas.
 df = df[df["Diferencia_de_dias"] >= 0]
+
 eventos = df['evento'].unique()
 #inicio lista vacia
 resultados = []
@@ -28,7 +33,9 @@ for evento in eventos:
                 "Mediana sin outliers": mediana
         })
 df_resultados = pd.DataFrame(resultados)
-print(df_resultados.describe())
+
 print(df_resultados)
 
-#df_resultados.to_csv("mediana_sin_outliers.csv", index=False, encoding="utf-8")
+# .to_csv creo un archivo csv para poder graficar de manera mas simple con excel.
+
+df_resultados.to_csv("mediana_sin_outliers.csv", index=False, encoding="utf-8")

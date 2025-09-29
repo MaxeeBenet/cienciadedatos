@@ -1,15 +1,15 @@
 import pandas as pd
 
-df = pd.read_csv('df_limpio_con_repeticiones.csv', sep=',', encoding='utf-8')
+df = pd.read_csv('df_limpio.csv', encoding='utf-8')
 
-df_filtrado = df[df['signo_/_síntoma'] != "*sin dato*"]
+df_filtrado = df[df['signo_/_sintoma'] != "No disponible"]
 
 resumen = (
     df_filtrado
-    .groupby(['evento','signo_/_síntoma'])
+    .groupby(['evento','signo_/_sintoma'])
     .agg(
-        total_casos = ('signo_/_síntoma', "size"),
-        internados = ('fecha_internación', lambda x:( x != "*sin dato*").sum()),
+        total_casos = ('signo_/_sintoma', "size"),
+        internados = ('fecha_internacion', lambda x:( x != "No disponible").sum()),
         fallecidos = ('fallecido', lambda x: (x == "SI").sum())
     )
     .reset_index()
@@ -25,3 +25,4 @@ sintomas_top_2 = (
 
 print(sintomas_top_2)
 
+sintomas_top_2.to_csv("sintomas_enfermedad.csv", index=False, encoding='utf-8')

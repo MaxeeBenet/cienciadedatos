@@ -13,7 +13,7 @@ df_top10 = df[df['municipio'].isin(top_10_municipios)]
 # Crear pivot table para el gráfico apilado
 pivot_df = df_top10.pivot_table(
     index='municipio', 
-    columns='antecedente_epidemiológico', 
+    columns='antecedente_epidemiologico', 
     values='cantidad_casos', 
     aggfunc='sum', 
     fill_value=0

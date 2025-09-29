@@ -1,6 +1,6 @@
 import pandas as pd
 #creo mi dataframe leyendo el csv
-df = pd.read_csv('df_limpio_con_repeticiones.csv', encoding='utf-8')
+df = pd.read_csv('df_limpio.csv', encoding='utf-8')
 #los ordeno de menor a mayor
 df = df.sort_values(by='nro_doc', ascending=True)
 #elimino dni duplicados considerando que no tengan mas de una enfermedad.
