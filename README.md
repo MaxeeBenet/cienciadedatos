@@ -48,3 +48,9 @@ Tambien se realizo un filtro de outliers y diferencias de dias mayores a 0 (Fech
 - Analisis de calculo de dias y mediana: [mediana_sin_outliers.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/mediana_sin_outliers.py)
 
 ## 3 - Seccion clínica.
+Al realizar este analisis en vez de un TOP 1 utilice un TOP 2.
+Durante este analisis utilice un CSV que sin filtrar las coincidencias de mas de un DNI.
+- Analisis por sintomas: [sintomas.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/sintomas.py)
+- Cantidad de internados: [internados.py]()
+- Cantidad de fallecidos: [fallecidos.py]()
+## 4 - Seccion laboratorio. 
