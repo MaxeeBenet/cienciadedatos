@@ -37,7 +37,7 @@ Ordenar por DNI de menor a mayor.
 Eliminacion de DNI duplicados con chequeo de mas de un evento por DNI para garantizar integridad del análisis.
 Dado que el dataset contiene informacion por localidad, se realizo un mapeo a municipios para el analisis, . Se utilizo fuzzy matching para maximizar las coincidencias.
 - Codigo por evento: [evento.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/eventos.py) Analisis de cantidad de casos por enfermedad.
-  (.imagenes/casos_enfermedad.png)
+  (.imagenes/casos_enfermedad.jpg)
 - Codigo por clasificación: [clasificacion.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/clasificacion.py) Analisis de cantidad de coincidencias por cada clasificacion del caso.
 - Codigos por municipio: [municipio.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/municipio.py) Analisis por rangos, contar la cantidad de municipios tenian X cantidad casos en un rango.
 - Codigos por municipio: [municipio2.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/municipio2.py) Analisis de eventos por municipio.
