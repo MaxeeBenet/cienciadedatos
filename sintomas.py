@@ -1,26 +1,30 @@
 import pandas as pd
 
+# Cargar el CSV
 df = pd.read_csv('df_limpio.csv', encoding='utf-8')
 
-df_filtrado = df[df['signo_/_sintoma'] != "No disponible"]
+# Filtrar filas con signos/síntomas disponibles
+df_disponibles = df[df['signo_/_sintoma'] != "No disponible"]
 
-resumen = (
-    df_filtrado
-    .groupby(['evento','signo_/_sintoma'])
-    .agg(
-        total_casos = ('signo_/_sintoma', "size")
-    )
-    .reset_index()
+# Agrupar por evento y signo/síntoma para contar casos
+resumen_casos = (
+    df_disponibles
+    .groupby(['evento', 'signo_/_sintoma'], as_index=False)
+    .size()
+    .rename(columns={'size': 'total_casos'})
 )
 
-sintomas_top_2 = (
-    resumen
+# Obtener los 2 signos/síntomas más frecuentes por evento
+sintomas_top2 = (
+    resumen_casos
     .sort_values(['evento', 'total_casos'], ascending=[True, False])
     .groupby('evento')
     .head(2)
     .reset_index(drop=True)
 )
 
-print(sintomas_top_2)
+# Mostrar resultado
+print(sintomas_top2)
 
-sintomas_top_2.to_csv("sintomas_enfermedad.csv", index=False, encoding='utf-8')
+# Guardar a CSV
+sintomas_top2.to_csv("sintomas_enfermedad.csv", index=False, encoding='utf-8')
