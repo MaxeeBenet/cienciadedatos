@@ -31,19 +31,20 @@ operador al momento de la carga?
 ## Preparacion y normalización de datos.
 Eliminar columnas vacias, normalizar index de columnas, reemplazar espacios por guiones bajos, reemplazar caracteres con tilde. Reemplazar distintas variaciaciones de "*sin dato*" como dato nulo a un solo valor "No disponible".
 Ordenar por DNI de menor a mayor.
-- Codigo: [evento.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/normalizar_datos.py)
+- Codigo: [normalizar_datos.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/normalizar_datos.py)
 
 ## 1 - Analisis nominal.
 Eliminacion de DNI duplicados con chequeo de mas de un evento por DNI para garantizar integridad del análisis.
 Dado que el dataset contiene informacion por localidad, se realizo un mapeo a municipios para el analisis, . Se utilizo fuzzy matching para maximizar las coincidencias.
-- Codigo por evento: evento.py
-
-- Codigo por clasificación: clasificacion.py
-
-- Codigos por municipio: municipio.py Analisis por rangos, contar la cantidad de municipios tenian X cantidad casos en un rango.
-- Codigos por municipio: municipio2.py Analisis de eventos por municipio.
-- Codigos por municipio: municipio3.py Analisis de casos por municipio.
+- Codigo por evento: [evento.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/eventos.py) Analisis de cantidad de casos por enfermedad.
+- Codigo por clasificación: [clasificacion.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/clasificacion.py) Analisis de cantidad de coincidencias por cada clasificacion del caso.
+- Codigos por municipio: [municipio.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/municipio.py) Analisis por rangos, contar la cantidad de municipios tenian X cantidad casos en un rango.
+- Codigos por municipio: [municipio2.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/municipio2.py) Analisis de eventos por municipio.
+- Codigos por municipio: [municipio3.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/municipio3.py) Analisis de casos por municipio.
 
 ## 2 - Analisis clínico.
 Durante este analisis se utilizo un CSV en la cual se filtraron las repeticiones de DNI con First match, first keep, chequeando que no haya otro evento en el mismo DNI, dado que esto altera las mediciones de la mediana.
-- Analisis de calculo de dias y mediana: mediana_sin_outliers.py
+Tambien se realizo un filtro de outliers y diferencias de dias mayores a 0 (Fechas de inicio de sintomas superiores posteriores a la fecha de consulta).
+- Analisis de calculo de dias y mediana: [mediana_sin_outliers.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/mediana_sin_outliers.py)
+
+## 3 - Seccion clínica.
