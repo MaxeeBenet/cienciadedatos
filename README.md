@@ -49,8 +49,15 @@ Dado que el dataset contiene informacion por localidad, se realizo un mapeo a mu
 
 ## 2 - Analisis clínico.
 Durante este analisis se utilizo un CSV en la cual se filtraron las repeticiones de DNI con First match, first keep, chequeando que no haya otro evento en el mismo DNI, dado que esto altera las mediciones de la mediana.
-Tambien se realizo un filtro de outliers y diferencias de dias mayores a 0 (Fechas de inicio de sintomas superiores posteriores a la fecha de consulta).
+Tambien se realizo un filtro de outliers y diferencias de dias mayores a 0 (Fechas de inicio de sintomas posteriores a la fecha de consulta no fueron utilizados en este analisis.).
 - Analisis de calculo de dias y mediana: [mediana_sin_outliers.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/mediana_sin_outliers.py)
+Luego de este analisis y un filtrado se puede obtener:
+| Enfermedad | Mediana sin outliers |
+|:----------:|:--------------------:|
+| Hantavirosis | 3 |
+| Coqueluche | 2 |
+| Lepra - Enfermedad de Hansen | 88 |
+| Intento de Suicidio | 0 |
 
 ## 3 - Seccion clínica.
 Al realizar este analisis en vez de un TOP 1 utilice un TOP 2.
@@ -63,3 +70,26 @@ Para el analisis de internaciones y defunciones utilice el CSV filtrando las dup
  ![](imagenes/internados_fallecidos.jpg)
 
 ## 4 - Seccion laboratorio. 
+Para este analisis utilice mi CSV ya normalizado y filtrando los DNI duplicados.
+El resultado de este analisis es directo y de sencilla interpretación.
+Pero si es un resultado que esta muy marcado por la falta de campos sin información.
+- Codigo laboratorio: [resultados_laboratorio.py](porcentaje_negativos.py)
+![](imagenes/porcentajes_resultados.JPG)
+
+##5 - Seccion de epidemiologia.
+Para este analisis se utilizo un primero un analisis de dataset sin repeticiones y normalizado.
+De este analisis se obtuvo 2 datasets distintos, uno con los antecedentes epidemiologicos por enfermedad y otro por municipio.
+- Confección de ambos CSV: [confeccion_csv](antecedentes_municipios.py)
+Una vez realizado estos datasets se procedio a analizarlos.
+- Codigo de analisis por municipio: [municipio.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/antecedentes_epidemiologicos_municipio.py)
+Se obtuvo el siguiente grafico:
+![](https://github.com/MaxeeBenet/cienciadedatos/blob/main/imagenes/dist_antecedentes_epidemiologicos.png)
+Se utilizo un top 10 debido a la cantidad de municipios lo cual resulta en un gráfico poco legible.
+- Codigo de analisis por enfermedad: [enfermedad.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/antecedentes_epidemiologicos_eventos.py)
+Se obtuvo el siguiente grafico:
+![](https://github.com/MaxeeBenet/cienciadedatos/blob/main/imagenes/Figure_1.png)
+De este analisis se puede observar que Intentos de suicidio no tiene un antecedente epidemilogico para analizar.
+
+## 6 - Analisis final.
+
+Luego de todos los analisis se puede observar errores de carga en la poca cantidad de datos disponible, como asi los DNI con mas de 11 cifras, fechas de inicio de sintomas posteriores a la fecha de consulta de dicha enfermedad. Varios errores en localidad hizo que se dificulte la correcta asignacion del correspondiente municipio. Se encontraron luego de charla con pares, hospitales que no correspondian a la misma localidad del paciente, muchos de ellos ubicados en capital federal o provincias aledañas a la Provincia de Buenos Aires.
