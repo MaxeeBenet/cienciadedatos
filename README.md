@@ -37,15 +37,15 @@ Ordenar por DNI de menor a mayor.
 Eliminacion de DNI duplicados con chequeo de mas de un evento por DNI para garantizar integridad del análisis.
 Dado que el dataset contiene informacion por localidad, se realizo un mapeo a municipios para el analisis, . Se utilizo fuzzy matching para maximizar las coincidencias.
 - Codigo por evento: [evento.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/eventos.py) Analisis de cantidad de casos por enfermedad.
-  ![](imagenes/casos_enfermedad.jpg)
+  ![](https://github.com/MaxeeBenet/cienciadedatos/blob/main/imagenes/casos_enfermedad.jpg)
 - Codigo por clasificación: [clasificacion.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/clasificacion.py) Analisis de cantidad de coincidencias por cada clasificacion del caso.
-  ![](imagenes/casos_clasificacion.jpg)
+  ![](https://github.com/MaxeeBenet/cienciadedatos/blob/main/imagenes/casos_clasificacion.jpg)
 - Codigos por municipio: [municipio.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/municipio.py) Analisis por rangos, contar la cantidad de municipios tenian X cantidad casos en un rango.
-  ![](imagenes/casos_rango.jpg)
+  ![](https://github.com/MaxeeBenet/cienciadedatos/blob/main/imagenes/casos_rango.jpg)
 - Codigos por municipio: [municipio2.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/municipio2.py) Analisis de eventos por municipio.
-  ![](imagenes/cant_enfermedades_municipio2.jpg)
+  ![](https://github.com/MaxeeBenet/cienciadedatos/blob/main/imagenes/cant_enfermedades_municipio2.jpg)
 - Codigos por municipio: [municipio3.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/municipio3.py) Analisis de casos por municipio.
-  ![](imagenes/top10_con_otros3.jpg)
+  ![]((https://github.com/MaxeeBenet/cienciadedatos/blob/main/imagenes/top10_con_otros3.jpg)
 
 ## 2 - Analisis clínico.
 Durante este analisis se utilizo un CSV en la cual se filtraron las repeticiones de DNI con First match, first keep, chequeando que no haya otro evento en el mismo DNI, dado que esto altera las mediciones de la mediana.
@@ -64,22 +64,22 @@ Al realizar este analisis en vez de un TOP 1 utilice un TOP 2.
 Durante este analisis utilice un CSV que sin filtrar las coincidencias de mas de un DNI.
 Para el analisis de internaciones y defunciones utilice el CSV filtrando las duplicados por DNI.
 - Analisis por sintomas: [sintomas.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/sintomas.py)
-![](imagenes/sintomas_frecuentes.jpg)
-- Cantidad de internados: [internados.py](fallecidos_internados.py#L5-L7)
-- Cantidad de fallecidos: [fallecidos.py](fallecidos_internados.py#L9-L11)
- ![](imagenes/internados_fallecidos.jpg)
+![](https://github.com/MaxeeBenet/cienciadedatos/blob/main/imagenes/sintomas_frecuentes.jpg)
+- Cantidad de internados: [internados.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/fallecidos_internados.py#L5-L7)
+- Cantidad de fallecidos: [fallecidos.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/fallecidos_internados.py#L9-L11)
+ ![](https://github.com/MaxeeBenet/cienciadedatos/blob/main/imagenes/internados_fallecidos.jpg)
 
 ## 4 - Seccion laboratorio. 
 Para este analisis utilice mi CSV ya normalizado y filtrando los DNI duplicados.
 El resultado de este analisis es directo y de sencilla interpretación.
 Pero si es un resultado que esta muy marcado por la falta de campos sin información.
-- Codigo laboratorio: [resultados_laboratorio.py](porcentaje_negativos.py)
-![](imagenes/porcentajes_resultados.JPG)
+- Codigo laboratorio: [resultados_laboratorio.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/porcentaje_negativos.py)
+![](https://github.com/MaxeeBenet/cienciadedatos/blob/main/imagenes/porcentajes_resultados.JPG)
 
 ##5 - Seccion de epidemiologia.
 Para este analisis se utilizo un primero un analisis de dataset sin repeticiones y normalizado.
 De este analisis se obtuvo 2 datasets distintos, uno con los antecedentes epidemiologicos por enfermedad y otro por municipio.
-- Confección de ambos CSV: [confeccion_csv](antecedentes_municipios.py)
+- Confección de ambos CSV: [confeccion_csv](https://github.com/MaxeeBenet/cienciadedatos/blob/main/antecedentes_municipios.py)
 Una vez realizado estos datasets se procedio a analizarlos.
 - Codigo de analisis por municipio: [municipio.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/antecedentes_epidemiologicos_municipio.py)
 Se obtuvo el siguiente grafico:
