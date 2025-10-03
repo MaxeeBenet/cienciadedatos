@@ -3,7 +3,7 @@ import pandas as pd
 
 df = pd.read_csv("df_limpio_municipio_sin_repeticiones.csv", encoding="utf-8")
 
-df_filtrado = df[(df["antecedente_epidemiologico"] != "No disponible") & (df["municipio"] != "No disponible")]
+df_filtrado = df[(df["antecedente_epidemiologico"] != "No disponible") & (df["municipio"] != " No disponible")]
 
 tabla_df_municipio = (
     df_filtrado.groupby(['municipio', 'antecedente_epidemiologico'])

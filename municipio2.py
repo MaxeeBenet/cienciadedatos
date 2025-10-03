@@ -2,7 +2,7 @@ import pandas as pd
 
 df_unico = pd.read_csv("df_limpio_municipio_sin_repeticiones.csv")
 #filtro columna no disponible.
-df_filtrado = df_unico[df_unico["municipio"] != "No disponible"]
+df_filtrado = df_unico[df_unico["municipio"] != " No disponible"]
 
 casos_por_municipio = (
     df_filtrado.groupby("municipio")["evento"]

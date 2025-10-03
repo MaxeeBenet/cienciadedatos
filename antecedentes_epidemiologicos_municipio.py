@@ -5,6 +5,8 @@ import numpy as np
 # Leer directamente el archivo CSV
 df = pd.read_csv('antecedentes_epidemiologicos_municipios.csv')
 
+df = df[df['municipio'] != " No disponible"]
+
 top_10_municipios = df.groupby('municipio')['cantidad_casos'].sum().nlargest(10).index
 
 # Filtrar datos para solo los top 10 municipios

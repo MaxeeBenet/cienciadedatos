@@ -2,7 +2,7 @@ import pandas as pd
 
 df_unico = pd.read_csv("df_limpio_municipio_sin_repeticiones.csv")
 #filtro columna no disponible.
-df_filtrado = df_unico[df_unico["municipio"] != "No disponible"]
+df_filtrado = df_unico[df_unico["municipio"] != " No disponible"]
 
 #total de casos por municipio
 casos_por_municipio = (
