@@ -53,10 +53,15 @@ Tambien se realizo un filtro de outliers y diferencias de dias mayores a 0 (Fech
 - Analisis de calculo de dias y mediana: [mediana_sin_outliers.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/mediana_sin_outliers.py)
 Luego de este analisis y un filtrado se puede obtener:
 | Enfermedad | Mediana sin outliers |
+
 |:----------:|:--------------------:|
+
 | Hantavirosis | 3 |
+
 | Coqueluche | 2 |
+
 | Lepra - Enfermedad de Hansen | 88 |
+
 | Intento de Suicidio | 0 |
 
 ## 3 - Seccion clínica.
