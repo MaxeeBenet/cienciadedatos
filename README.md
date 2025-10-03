@@ -52,17 +52,18 @@ Durante este analisis se utilizo un CSV en la cual se filtraron las repeticiones
 Tambien se realizo un filtro de outliers y diferencias de dias mayores a 0 (Fechas de inicio de sintomas posteriores a la fecha de consulta no fueron utilizados en este analisis.).
 - Analisis de calculo de dias y mediana: [mediana_sin_outliers.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/mediana_sin_outliers.py)
 Luego de este analisis y un filtrado se puede obtener:
-| Enfermedad | Mediana sin outliers |
 
-|:----------:|:--------------------:|
+|   Enfermedad    |    Mediana sin outliers |
 
-| Hantavirosis | 3 |
+|:---------------:|:-----------------------:|
 
-| Coqueluche | 2 |
+|   Hantavirosis  |          3              |
 
-| Lepra - Enfermedad de Hansen | 88 |
+|   Coqueluche    |          2              |
 
-| Intento de Suicidio | 0 |
+|   Lepra         |          88             |
+
+|   Suicidio      |          0              |
 
 ## 3 - Seccion clínica.
 Al realizar este analisis en vez de un TOP 1 utilice un TOP 2.
