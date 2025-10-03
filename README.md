@@ -45,7 +45,7 @@ Dado que el dataset contiene informacion por localidad, se realizo un mapeo a mu
 - Codigos por municipio: [municipio2.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/municipio2.py) Analisis de eventos por municipio.
   ![](https://github.com/MaxeeBenet/cienciadedatos/blob/main/imagenes/cant_enfermedades_municipio2.jpg)
 - Codigos por municipio: [municipio3.py](https://github.com/MaxeeBenet/cienciadedatos/blob/main/municipio3.py) Analisis de casos por municipio.
-  ![]((https://github.com/MaxeeBenet/cienciadedatos/blob/main/imagenes/top10_con_otros3.jpg)
+  ![](https://github.com/MaxeeBenet/cienciadedatos/blob/main/imagenes/top10_con_otros3.jpg)
 
 ## 2 - Analisis clínico.
 Durante este analisis se utilizo un CSV en la cual se filtraron las repeticiones de DNI con First match, first keep, chequeando que no haya otro evento en el mismo DNI, dado que esto altera las mediciones de la mediana.
